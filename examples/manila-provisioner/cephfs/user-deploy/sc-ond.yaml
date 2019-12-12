@@ -1,14 +1,14 @@
 apiVersion: storage.k8s.io/v1beta1
 kind: StorageClass
 metadata:
-  name: manila-cephfs-share
+  name: manila-cephfs-share-ond
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
 provisioner: manila-provisioner
 parameters:
   type: default_share_type
   zones: nova
   osSecretName: manila-secrets
   osSecretNamespace: default
-  osShareName: HomeDirs
-  osShareAccessID: 2a5cdcc9-8a85-431a-87f8-11abfde90acf
   protocol: CEPHFS
   backend: cephfs

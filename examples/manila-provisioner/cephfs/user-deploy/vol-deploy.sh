@@ -1,2 +1,2 @@
 #!/bin/sh
-kubectl create -f ./sc.yaml && kubectl create -f ./pvc.yaml
+kubectl apply -f ./sc.yaml && kubectl apply -f ./pvc.yaml

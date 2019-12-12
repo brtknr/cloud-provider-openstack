@@ -1,2 +1,2 @@
 #!/bin/sh
-./vol-deploy.sh && kubectl create -f demo.yaml
+./vol-deploy.sh && kubectl apply -f demo.yaml
